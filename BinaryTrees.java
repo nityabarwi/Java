@@ -114,3 +114,15 @@ public class BinaryTrees {
     }
 }
 
+//Output
+// The root of the tree is 1
+// Preorder Traversal
+// 1 2 4 5 3 6 
+// Inorder Traversal
+// 4 2 5 1 3 6 
+// PostOrder Traversal
+// 4 5 2 6 3 1 
+// Level Order Traversal
+// 1 
+// 2 3 
+// 4 5 6 
