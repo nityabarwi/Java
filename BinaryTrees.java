@@ -12,6 +12,15 @@ public class BinaryTrees {
             this.right = null;
         }
     }
+    //Height of tree
+    public static int height(Node root) {
+        if(root == null) {
+            return 0;
+        }
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
 
     static class BinaryTree {
         static int idx = -1;
@@ -111,6 +120,9 @@ public class BinaryTrees {
         
         System.out.println("Level Order Traversal");
         levelOrder(root);
+
+        System.out.println("Height of tree is " + height(root));
+        System.out.println();
     }
 }
 
@@ -126,3 +138,4 @@ public class BinaryTrees {
 // 1 
 // 2 3 
 // 4 5 6 
+// Height of tree is 3
