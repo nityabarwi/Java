@@ -131,7 +131,8 @@ public class BinaryTrees {
         levelOrder(root);
 
         System.out.println("Height of tree is " + height(root));
-        System.out.println();
+
+        System.out.println("Number of nodes in tree: " + countNodes(root));
     }
 }
 
