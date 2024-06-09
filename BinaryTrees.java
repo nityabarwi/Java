@@ -149,3 +149,4 @@ public class BinaryTrees {
 // 2 3 
 // 4 5 6 
 // Height of tree is 3
+// Number of nodes in tree: 6
