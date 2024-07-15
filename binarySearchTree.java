@@ -34,6 +34,22 @@ public class binarySearchTree {
         inorder(root.right);
     }
 
+    //Search Operation
+    public static boolean search(Node root, int key) {
+        if(root == null) {
+            return false;
+        }
+        if(root.data > key) {
+            return search(root.left, key);
+        }
+        else if(root.data == key) {
+            return true;
+        }
+        else {
+            return search(root.right, key);
+        }
+    }
+
     public static void main(String[] args){
         int values[] = {5, 1, 3, 4, 2, 7};
         Node root = null;
