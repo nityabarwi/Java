@@ -59,5 +59,11 @@ public class binarySearchTree {
 
         inorder(root);
         System.out.println();
+
+        if (search(root, 1)) {
+            System.out.println("Found");
+        } else {
+            System.out.println("Not found");
+        }
     }
 }
