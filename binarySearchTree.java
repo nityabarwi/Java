@@ -77,6 +77,14 @@ public class binarySearchTree {
         }
         return root;
     }
+
+    public static Node inorderSuccessor(Node root) {
+        while(root.left != null){
+            root = root.left;
+        }
+        return root;
+    }
+
   
     public static void main(String[] args){
         int values[] = {5, 1, 3, 4, 2, 7};
