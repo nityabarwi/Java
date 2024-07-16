@@ -119,8 +119,11 @@ public class binarySearchTree {
         } else {
             System.out.println("Not found");
         }
+
+        range(root, 2, 6);
         
         delete(root, 5);
         inorder(root);
+      
     }
 }
