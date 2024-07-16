@@ -78,6 +78,24 @@ public class binarySearchTree {
         return root;
     }
 
+    //Print in Range
+    public static void range(Node root, int X, int Y) {
+        if(root == null) {
+            return;
+        }
+        if(root.data >= X && root.data <= Y) {
+            range(root.left, X, Y);
+            System.out.print(root.data + " ");
+            range(root.right, X, Y);
+        }
+        else if (root.data >= Y) {
+            range(root.left, X, Y);
+        }
+        else {
+            range(root.right, X, Y);
+        }
+    }
+
     public static Node inorderSuccessor(Node root) {
         while(root.left != null){
             root = root.left;
