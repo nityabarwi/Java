@@ -50,6 +50,34 @@ public class binarySearchTree {
         }
     }
 
+  //Delete A Node
+    public static Node delete(Node root, int value) {
+        if(root.data > value) {
+            root.left = delete(root.left, value);
+        }
+        else if (root.data < value) {
+            root.right = delete(root.right, value);
+        }
+        else {                   //root.data == val
+            //Case 1
+            if(root.left == null && root.right == null) {
+                return null;
+            }
+            //Case 2
+            if (root.left == null) {
+                return root.right;
+            }
+            else if(root.right == null) {
+                return root.left;
+            }
+            //Case 3
+            Node IS = inorderSuccessor(root.right);
+            root.data = IS.data;
+            root.right = delete(root.right, IS.data);
+        }
+        return root;
+    }
+  
     public static void main(String[] args){
         int values[] = {5, 1, 3, 4, 2, 7};
         Node root = null;
