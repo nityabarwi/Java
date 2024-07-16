@@ -101,5 +101,8 @@ public class binarySearchTree {
         } else {
             System.out.println("Not found");
         }
+        
+        delete(root, 5);
+        inorder(root);
     }
 }
