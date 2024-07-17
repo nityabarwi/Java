@@ -103,6 +103,14 @@ public class binarySearchTree {
         return root;
     }
 
+    //Print paths of tree
+    public static void printPath(ArrayList<Integer> path) {
+        for(int i = 0; i < path.size(); i++) {
+            System.out.print(path.get(i) + "-> ");
+        }
+        System.out.println();
+    }
+
   
     public static void main(String[] args){
         int values[] = {5, 1, 3, 4, 2, 7};
