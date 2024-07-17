@@ -145,6 +145,10 @@ public class binarySearchTree {
         }
 
         range(root, 2, 6);
+
+        System.out.println();
+
+        printPath2leaf(root, new ArrayList<>());
         
         delete(root, 5);
         inorder(root);
