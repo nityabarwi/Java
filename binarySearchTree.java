@@ -111,6 +111,22 @@ public class binarySearchTree {
         System.out.println();
     }
 
+    public static void printPath2leaf(Node root, ArrayList<Integer> path) {
+        if(root == null){
+            return;
+        }
+        path.add(root.data);
+
+        //leaf
+        if(root.left == null && root.right == null) {
+            printPath(path);
+        } else { //non-leaf
+            printPath2leaf(root.left, path);
+            printPath2leaf(root.right, path);
+        }
+        path.remove(path.size() - 1);
+    }
+
   
     public static void main(String[] args){
         int values[] = {5, 1, 3, 4, 2, 7};
