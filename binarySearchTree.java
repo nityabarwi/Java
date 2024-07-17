@@ -156,3 +156,13 @@ public class binarySearchTree {
       
     }
 }
+
+
+//Output
+// 1 2 3 5 6 7        Inorder Traversal
+// Found              Search
+// 2 3 5 6            Range
+// 5-> 2-> 1->        Paths Of Tree
+// 5-> 2-> 3-> 
+// 5-> 6-> 7-> 
+// 1 2 3 6 7          After Deletion
