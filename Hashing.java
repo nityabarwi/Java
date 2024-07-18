@@ -42,3 +42,19 @@ public class Hashing {
         System.out.println(map);
     }
 }
+
+//Output
+//{USA=150, Nepal=180, India=120}
+//{USA=150, Nepal=80, India=120}
+//Key is present.
+//null
+//USA
+//150
+//Nepal
+//80
+//India
+//120
+//USA 150
+//Nepal 80
+//India 120
+//{USA=150, India=120}
