@@ -15,3 +15,17 @@ public class Hashing {
         private int n;
         private int N;
         private LinkedList<Node> buckets[];
+
+        @SuppressWarnings("unchecked")
+        public HashMap() {
+            this.N = 4;
+            this.buckets = new LinkedList[4];
+            for(int i = 0; i < 4; i++) {
+                this.buckets[i] = new LinkedList<>();
+            }
+        }
+
+        private int hashFunction(K key) {
+            int bi = key.hashCode();
+            return Math.abs(bi) % N;
+        }
