@@ -29,3 +29,32 @@ public class Hashing {
             int bi = key.hashCode();
             return Math.abs(bi) % N;
         }
+
+        private int searchLL(K key, int bi) {
+            LinkedList<Node> ll = buckets[bi];
+            for(int i = 0; i < ll.size(); i++) {
+                if(ll.get(i).key == key) {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        @SuppressWarnings("unchecked")
+        private void rehash() {
+            LinkedList<Node> oldBucket[] = buckets;
+            buckets = new LinkedList[N * 2];
+
+            for(int i = 0; i < N * 2; i++) {
+                buckets[i] = new LinkedList<>();
+            }
+
+            for(int i = 0; i < oldBucket.length; i++) {
+                LinkedList<Node> ll = oldBucket[i];
+                for(int j = 0; j < ll.size(); j++) {
+                    Node node = ll.get(j);
+                    put(node.key, node.value);
+                }
+            }
+        }
