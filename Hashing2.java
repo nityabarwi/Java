@@ -76,3 +76,14 @@ public class Hashing {
                 rehash();
             }
         }
+
+        public boolean containsKey(K key) {
+            int bi = hashFunction(key);
+            int di = searchLL(key, bi);
+
+            if(di == -1) {
+                return false;
+            } else {
+                return true;
+            }
+        }
