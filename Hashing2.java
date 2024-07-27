@@ -101,4 +101,14 @@ public class Hashing {
             }
         }
 
-        
+        public V get(K key) {
+            int bi = hashFunction(key);
+            int di = searchLL(key, bi);
+
+            if(di == -1) {
+                return null;
+            } else {
+                Node node = buckets[bi].get(di);
+                return node.value;
+            }
+        }
