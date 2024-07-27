@@ -58,3 +58,21 @@ public class Hashing {
                 }
             }
         }
+
+        public void put(K key, V value) {
+            int bi = hashFunction(key);
+            int di = searchLL(key, bi);
+
+            if(di == -1) {
+                buckets[bi].add(new Node(key, value));
+                n++;
+            } else {
+                Node node = buckets[bi].get(di);
+                node.value =  value;
+            }
+
+            double lambda = (double)n/N;
+            if(lambda > 2.0) {
+                rehash();
+            }
+        }
