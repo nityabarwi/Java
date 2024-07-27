@@ -87,3 +87,18 @@ public class Hashing {
                 return true;
             }
         }
+
+        public V remove(K key) {
+            int bi = hashFunction(key);
+            int di = searchLL(key, bi);
+
+            if(di == -1) {
+                return null;
+            } else {
+                Node node = buckets[bi].remove(di);
+                n--;
+                return node.value;
+            }
+        }
+
+        
