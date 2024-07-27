@@ -112,3 +112,17 @@ public class Hashing {
                 return node.value;
             }
         }
+
+        public ArrayList<K> keySet() {
+            ArrayList<K> keys = new ArrayList<>();
+
+            for(int i = 0; i < buckets.length; i++) {
+                LinkedList<Node> ll = buckets[i];
+                for(int j = 0; j < ll.size(); j++) {
+                    Node node = ll.get(j);
+                    keys.add(node.key);
+                }
+            }
+            return keys;
+        }
+    }
