@@ -125,4 +125,25 @@ public class Hashing {
             }
             return keys;
         }
+
+        public static void main(String args[]) {
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("India", 190);
+        map.put("Nepal", 130);
+        map.put("USA", 210);
+
+        ArrayList<String> keys = map.keySet();
+        for(int i = 0; i < keys.size(); i++) {
+            System.out.println(keys.get(i) + " " + map.get(keys.get(i)));
+        }
+
+        map.remove("Nepal");
+        System.out.println(map.get("Nepal"));
     }
+}
+
+//Output
+//Nepal 130
+//India 190
+//USA 210
+//null
