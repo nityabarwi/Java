@@ -42,3 +42,15 @@ public class Tries {
         }
         return curr.eow == true;
     }
+
+    public static void main(String args[]) {
+        String words[] = { "the", "a", "there", "their", "any", "thee" };
+        for (String word : words) {
+            insert(word);
+            System.out.println("inserted " + word);
+        }
+
+        System.out.println("thee -> " + search("thee"));
+        System.out.println("thor -> " + search("thor"));
+    }
+}
