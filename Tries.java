@@ -54,3 +54,13 @@ public class Tries {
         System.out.println("thor -> " + search("thor"));
     }
 }
+
+//Output
+// inserted the
+// inserted a
+// inserted there
+// inserted their
+// inserted any
+// inserted thee
+// thee -> true
+// thor -> false
